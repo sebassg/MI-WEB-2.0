@@ -143,7 +143,7 @@ section h2 {
     padding-top: 20px;
 }
 
-@media (min-width:520px) {
+@media (min-width:620px) {
     
     h1 { font-size: 1.8em;}
     h2 { font-size: 1.4em;}
@@ -151,15 +151,34 @@ section h2 {
     p { font-size: .9em;}
     
     
-    header {
-        position: sticky;
-        top: 0;
-        width: 100%;
-
+    .nav{
+        --state-Menu: translate(100%);
+        --state-close: scale(0);
+        --state-menu:scale(0);
+    }
+    
+    
+    .nav:target{ 
+        --state-close: scale(0);
     }
 
-    header .container .menu {
-        visibility: hidden;
-    }
+    .navLinks {
+        padding: 0;
+        
+        background-color: unset;
+        position: unset;
 
+        
+        display: grid;
+        align-content: center;
+        gap: 1em;
+        grid-auto-flow: column;
+        
+    
+        transform: unset;
+
+        grid-column: -2/-1;
+        grid-row: 1/2;
+    
+    }
 }
